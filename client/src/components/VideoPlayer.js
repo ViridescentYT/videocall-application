@@ -22,7 +22,7 @@ const VideoPlayer = () => {
             <Paper>
                 <Grid item xs={12} md={6}>
                     <Typography variant='p' gutterBottom>{call.name || 'Name'}</Typography>
-                    <video playsInline muted ref={userVideo} autoPlay style={{ width: '550px', }} />
+                    <video playsInline ref={userVideo} autoPlay style={{ width: '550px', }} />
                 </Grid>
             </Paper>
         }

@@ -7,10 +7,14 @@ import { SocketContext } from '../contexts/SocketContext'
 const VideoPlayer = () => {
     const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
 
-    return <Grid>
-        <Paper>
+    return <Grid container style={{ justifyContent: 'center', }}>
+        <Paper style={{
+            padding: '10px',
+            border: '2px solid black',
+            margin: '10px',
+        }}>
+            <Typography variant='p' gutterBottom>{name || 'Name'}</Typography>
             <Grid item xs={12} md={6}>
-                <Typography variant='p' gutterBottom>{name || 'Name'}</Typography>
                 <video playsInline muted ref={myVideo} autoPlay />
             </Grid>
         </Paper>
@@ -18,7 +22,7 @@ const VideoPlayer = () => {
             <Paper>
                 <Grid item xs={12} md={6}>
                     <Typography variant='p' gutterBottom>{call.name || 'Name'}</Typography>
-                    <video playsInline muted ref={userVideo} autoPlay />
+                    <video playsInline muted ref={userVideo} autoPlay style={{ width: '550px', }} />
                 </Grid>
             </Paper>
         }

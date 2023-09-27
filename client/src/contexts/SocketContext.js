@@ -4,7 +4,7 @@ import Peer from 'simple-peer'
 
 const SocketContext = createContext();
 
-const socket = io('http://localhost:4000');
+const socket = io('https://videocall-backend-ld85.onrender.com');
 
 const ContextProvider = ({ children }) => {
     const [stream, setStream] = useState(null);
